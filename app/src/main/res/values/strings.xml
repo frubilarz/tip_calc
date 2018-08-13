@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="main.button.submit">Calcular</string>
+    <string name="main.hint.bill">Total</string>
+    <string name="main.hint.porcentaje">% de Propina</string>
+    <string name="main.button.incremento">+</string>
+    <string name="main.button.decremento">-</string>
+    <string name="main.button.limpiar">Borrar Reciente</string>
+    <string name="main.notificacion.clear">Elementos Recientes ha quedado vacio</string>
+    <string name="main.menu.action.about">Acerca de</string>
+
+    <string name="global.message.tip">Propina %,.1f</string>
+</resources>

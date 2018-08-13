@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/inputBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/main.hint.bill"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/inputBill"
+        android:text="@string/main.button.submit" />
+
+    <EditText
+        android:id="@+id/inputPorcentaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="@string/main.hint.porcentaje"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btnDecremento"
+        style="@style/Base.Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/inputPorcentaje"
+        android:layout_toRightOf="@id/btnIncremento"
+        android:text="@string/main.button.decremento" />
+
+    <Button
+        android:id="@+id/btnIncremento"
+        style="@style/Base.Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/inputPorcentaje"
+        android:layout_toRightOf="@id/inputPorcentaje"
+        android:text="@string/main.button.incremento" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/inputPorcentaje"
+        android:text="@string/main.notificacion.clear" />
+
+    <View
+        android:id="@+id/separador"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_alignEnd="@id/btnSubmit"
+        android:layout_alignRight="@id/btnSubmit"
+        android:layout_below="@id/btnClear"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>
