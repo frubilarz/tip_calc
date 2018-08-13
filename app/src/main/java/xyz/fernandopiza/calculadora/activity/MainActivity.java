@@ -1,4 +1,4 @@
-package xyz.fernandopiza.calculadora;
+package xyz.fernandopiza.calculadora.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import xyz.fernandopiza.calculadora.R;
+import xyz.fernandopiza.calculadora.fragmentos.HistoriaPropinaFragmentoListener;
+import xyz.fernandopiza.calculadora.fragmentos.HistoricoPropinasListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.textPropina)
     TextView textPropina;
 
+    private HistoriaPropinaFragmentoListener fragmentoListener;
+
     private final static int PROPINA_CAMBIO = 1;
     private final static int DEFAULT_PORCENTAJE = 10;
 
@@ -41,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        HistoricoPropinasListFragment fragment = (HistoricoPropinasListFragment) getSupportFragmentManager().
+                findFragmentById(R.id.fragmentoLista);
+        fragment.setRetainInstance(true);
+        fragmentoListener = (HistoriaPropinaFragmentoListener) fragment;
     }
 
     @OnClick(R.id.btnSubmit)
@@ -54,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             Double propina = total * (porcentaje / 100d);
 
             String propinaString = String.format(getString(R.string.global_message_tip), propina);
+            fragmentoListener.action(propinaString);
             textPropina.setVisibility(View.VISIBLE);
             textPropina.setText(propinaString);
 

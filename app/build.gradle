@@ -27,6 +27,7 @@ dependencies {
 
     //buterknife
     implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    implementation 'com.android.support:support-v4:27.1.1'
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
