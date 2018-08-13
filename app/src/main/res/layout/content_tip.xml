@@ -70,4 +70,14 @@
         android:layout_below="@id/btnClear"
         android:background="@android:color/darker_gray" />
 
+    <TextView
+        android:id="@+id/textPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/separador"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:visibility="gone" />
+
 </RelativeLayout>
